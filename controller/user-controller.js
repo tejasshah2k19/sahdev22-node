@@ -21,5 +21,16 @@ exports.signup = function (req, res) {
 
 
 exports.getAllUsers = function (req, res) {
-    res.json({ data: users, msg: "users reterived", status: 1 })
+
+    UserModel.find(function(err,data){
+        if(err){
+
+            res.json({ data: err, msg: "users not reterived", status: -1 })
+
+        }else{
+            res.json({ data: data, msg: "users reterived", status: 200 })
+
+        }
+    })
+ 
 }
