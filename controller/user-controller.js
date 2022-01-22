@@ -32,5 +32,16 @@ exports.getAllUsers = function (req, res) {
 
         }
     })
+}
+exports.deleteUser = function(req,res){
+
+    console.log(req.params.userId);
+    UserModel.deleteOne({_id:req.params.userId},function(err,data){
+            if(err){
+                res.json({status:200,msg:"user removed",data:err})
+            }else{
+                res.json({status:200,msg:"user removed",data:data})
+            }
+    })
  
 }
