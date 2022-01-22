@@ -1,0 +1,11 @@
+npm install express 
+npm install nodemon -g [ command prompt ]
+
+npm init 
+
+
+mongodb -->
+            1) mongodb
+            2) mongoose -- orm 
+
+npm install mongoose 
